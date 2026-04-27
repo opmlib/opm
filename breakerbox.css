@@ -1,0 +1,266 @@
+.breaker-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.breaker-view {
+  display: none;
+}
+
+.breaker-view.is-active {
+  display: block;
+}
+
+.breaker-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.breaker {
+  position: relative;
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  background: var(--bg);
+  border: var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.breaker:hover {
+  border: var(--hoverline);
+  box-shadow: var(--hover-shadow);
+  transform: translateY(-2px);
+}
+
+.breaker__slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--input-bg);
+  border-right: var(--line);
+  font-weight: 900;
+}
+
+.breaker__info {
+  padding: 10px 12px;
+}
+
+.breaker__label {
+  font-weight: 800;
+}
+
+.breaker__label small {
+  display: block;
+  font-weight: 600;
+  opacity: 0.7;
+  margin-top: 2px;
+}
+
+.breaker-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.breaker-spec {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: var(--gradient);
+  border: var(--gradient-border);
+  color: var(--darktext);
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.breaker-spec--gfci {
+  background: var(--blue);
+  border: var(--blue-border);
+}
+
+.breaker--unused {
+  opacity: 0.6;
+  border-style: dashed;
+}
+
+.breaker-category {
+  margin-bottom: 18px;
+}
+
+.breaker-category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .breaker-grid,
+  .breaker-category-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media print {
+  body {
+    background: #ffffff !important;
+    color: rgb(61, 72, 82) !important;
+  }
+
+  .footer,
+  .form-actions,
+  .breaker-toolbar,
+  .no-print {
+    display: none !important;
+  }
+.topbar {
+  display: flex !important;
+  position: static !important;
+  justify-content: center !important;
+  padding: 0 0 8px 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  backdrop-filter: none !important;
+}
+  .topbar img {
+  height: 28px !important;
+  width: auto !important;
+}
+  .page {
+    padding-top: 0 !important;
+  }
+
+  .main {
+    display: block !important;
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  .main__left,
+  .main__right {
+    width: 100% !important;
+    position: static !important;
+    box-shadow: none !important;
+    border: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+  }
+
+  .main__left {
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .main__right {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  .breaker-view {
+    display: none !important;
+  }
+
+  .breaker-view.is-active {
+    display: block !important;
+  }
+
+  .breaker-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+    align-items: start !important;
+  }
+
+  .breaker-list {
+    gap: 4px !important;
+  }
+
+  .breaker {
+    grid-template-columns: 46px 1fr !important;
+    min-height: auto !important;
+    border-radius: 7px !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+
+    /* EXTRA COMPRESSION */
+    margin-bottom: 2px !important;
+  }
+
+  .breaker__slot {
+    padding: 4px !important;
+    font-size: 9px !important;
+  }
+
+  .breaker__info {
+    padding: 3px 5px !important;
+  }
+
+  .breaker__label {
+    font-size: 8px !important;
+    line-height: 1.1 !important;
+  }
+
+  .breaker__label small {
+    font-size: 8px !important;
+    margin-top: 1px !important;
+  }
+
+  .breaker-specs {
+    margin-top: 3px !important;
+    gap: 3px !important;
+  }
+
+  .breaker-spec {
+    font-size: 6px !important;
+    padding: 1px 4px !important;
+  }
+
+  .breaker-column-title {
+    font-size: 9px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .section {
+    margin-bottom: 6px !important;
+  }
+
+  .section__title {
+    font-size: 16px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .section__subtitle {
+    font-size: 9px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .badge {
+    font-size: 7px !important;
+    padding: 3px 6px !important;
+    margin-bottom: 4px !important;
+  }
+
+  fieldset,
+  .card,
+  .alert {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  fieldset {
+    margin-bottom: 6px !important;
+    padding: 6px !important;
+  }
+
+  @page {
+    size: letter portrait;
+      margin: 0.35in 0.5in;
+  }
+}
