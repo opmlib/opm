@@ -572,11 +572,22 @@ td  {
 tbody tr:hover  {
   background: #fafafa;
 }
-.log-scroll{
-  max-height: 400px;
-  overflow-y: auto;
-  overflow-x: auto;
-  border-radius: var(--radius);
+/* Admin log internal scroll */
+.table-wrap.log-scroll {
+  display: block;
+  max-height: 360px;
+  overflow-y: auto !important;
+  overflow-x: auto !important;
+}
+
+.table-wrap.log-scroll table {
+  margin: 0;
+}
+
+.table-wrap.log-scroll thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
 /* =========================
