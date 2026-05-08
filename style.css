@@ -547,6 +547,11 @@ textarea  {
 /* =========================
 10. TABLES
 ========================= */
+.table-wrap td input,
+.table-wrap td select{
+  border-radius: 8px !important;
+  overflow: hidden;
+}
 .table-wrap  {
   width: 100%;
   overflow-x: auto;
@@ -555,7 +560,8 @@ textarea  {
 }
 table  {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   min-width: 700px;
   background: var(--tablebg);
   color: rgb(61, 72, 82);
