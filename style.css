@@ -572,6 +572,12 @@ td  {
 tbody tr:hover  {
   background: #fafafa;
 }
+.log-scroll{
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: auto;
+  border-radius: var(--radius);
+}
 
 /* =========================
 11. LISTS / BADGES / ALERTS
