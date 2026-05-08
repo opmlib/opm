@@ -1229,10 +1229,22 @@ PORTAL DROPDOWN FIX
     position: sticky;
     top: 0;
     z-index: 20;
+        background: radial-gradient(600px 300px at 10% 0%,
+        rgba(200, 216, 127, 0.25),
+        transparent 60%),
+      radial-gradient(500px 300px at 100% 0%,
+        rgba(238, 57, 67, 0.2),
+        transparent 60%),
+      radial-gradient(600px 400px at 50% 100%,
+        rgba(47, 172, 160, 0.18),
+        transparent 70%),
+      #ffffff;
+
   }
 
   .log-scroll thead th {
     position: sticky;
     top: 0;
     z-index: 21;
+        background: transparent;
   }
