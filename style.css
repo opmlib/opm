@@ -77,6 +77,17 @@
   rgba(47, 172, 160, 0.4),
   transparent 65%),
   linear-gradient(180deg, #f8fbff 0%, #eef6ff 100%);
+  --tablehead:
+  radial-gradient(600px 300px at 10% 0%,
+    rgba(200, 216, 127, 0.25),
+    transparent 60%),
+  radial-gradient(500px 300px at 100% 0%,
+    rgba(238, 57, 67, 0.2),
+    transparent 60%),
+  radial-gradient(600px 400px at 50% 100%,
+    rgba(47, 172, 160, 0.18),
+    transparent 70%),
+  #ffffff;
 
 /* Gradient borders */
   --gradient-border: 1px solid rgba(182, 215, 255, 0.2);
@@ -550,16 +561,7 @@ table  {
   color: rgb(61, 72, 82);
 }
 thead  {
-  background: radial-gradient(600px 300px at 10% 0%,
-  rgba(200, 216, 127, 0.25),
-  transparent 60%),
-  radial-gradient(500px 300px at 100% 0%,
-  rgba(238, 57, 67, 0.2),
-  transparent 60%),
-  radial-gradient(600px 400px at 50% 100%,
-  rgba(47, 172, 160, 0.18),
-  transparent 70%),
-  #ffffff;
+  background: var(--tablehead);
   backdrop-filter: blur(6px);
 }
 th,
@@ -1229,16 +1231,7 @@ PORTAL DROPDOWN FIX
     position: sticky;
     top: 0;
     z-index: 20;
-        background: radial-gradient(600px 300px at 10% 0%,
-        rgba(200, 216, 127, 0.25),
-        transparent 60%),
-      radial-gradient(500px 300px at 100% 0%,
-        rgba(238, 57, 67, 0.2),
-        transparent 60%),
-      radial-gradient(600px 400px at 50% 100%,
-        rgba(47, 172, 160, 0.18),
-        transparent 70%),
-      #ffffff;
+background: var(--tablehead);
 
   }
 
