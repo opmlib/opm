@@ -101,7 +101,12 @@
         --input-bg: #1a1c22;
         --icon-filter: brightness(0) saturate(100%) invert(90%);
       }
-
+body.dark .nav-category:hover{
+  background:rgba(255,255,255,0.06);
+}
+body.dark .nav-dropdown a:hover{
+  background:rgba(255,255,255,0.06);
+}
       /* =========================
    3. RESET
 ========================= */
@@ -225,10 +230,60 @@
       .nav {
         margin-left: 30px;
         display: flex;
-        gap: 10px;
+        gap: 18px;
         flex-wrap: wrap;
+        align-items:center;
       }
+      .nav-group{
+        position:relative;
+      }
+.nav-category{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  cursor:pointer;
+  padding:10px 14px;
+  border-radius:999px;
+  transition:.2s ease;
+  font-size:14px;
+  color:var(--text);
+}
 
+.nav-category:hover{
+  background:rgba(0,0,0,0.04);
+}
+.nav-dropdown{
+  position:absolute;
+  top:100%;
+  left:0;
+  min-width:220px;
+  display:none;
+  flex-direction:column;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:8px;
+  z-index:9999;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+  backdrop-filter:blur(20px);
+}
+
+.nav-group:hover .nav-dropdown{
+  display:flex;
+}
+
+.nav-dropdown a{
+  text-decoration:none;
+  color:var(--text);
+  padding:10px 12px;
+  border-radius:12px;
+  transition:.2s ease;
+  font-size:14px;
+}
+
+.nav-dropdown a:hover{
+  background:rgba(0,0,0,0.05);
+}
       .nav a {
         display: inline-flex;
         align-items: center;
