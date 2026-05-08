@@ -572,24 +572,6 @@ td  {
 tbody tr:hover  {
   background: #fafafa;
 }
-/* Admin log internal scroll */
-.table-wrap.log-scroll {
-  display: block;
-  max-height: 360px;
-  overflow-y: auto !important;
-  overflow-x: auto !important;
-}
-
-.table-wrap.log-scroll table {
-  margin: 0;
-}
-
-.table-wrap.log-scroll thead th {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-}
-
 /* =========================
 11. LISTS / BADGES / ALERTS
 ========================= */
@@ -1228,4 +1210,21 @@ PORTAL DROPDOWN FIX
   width: 100%;
   border-radius: 12px;
   white-space: nowrap;
+}
+/* Admin log internal scroll */
+.table-wrap.log-scroll {
+  display: block;
+  max-height: 360px;
+  overflow-y: auto !important;
+  overflow-x: auto !important;
+}
+
+.table-wrap.log-scroll table {
+  margin: 0;
+}
+
+.table-wrap.log-scroll thead th {
+  position: sticky;
+  top: 0;
+  z-index: 5;
 }
