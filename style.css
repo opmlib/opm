@@ -552,6 +552,9 @@ textarea  {
   border-radius: 8px !important;
   overflow: hidden;
 }
+input, select, textarea {
+border-radius: 8px !important;
+}
 .table-wrap  {
   width: 100%;
   overflow-x: auto;
